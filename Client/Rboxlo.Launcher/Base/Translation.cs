@@ -44,7 +44,7 @@ namespace Rboxlo.Launcher.Base
         /// <summary>
         /// Current locale
         /// </summary>
-        public static readonly string Locale = (Messages[CultureInfo.CurrentCulture.Name] == null ? "en-US" : CultureInfo.CurrentCulture.Name); // quick ternary to fallback if locale is not implemented
+        public static readonly string Locale = (Messages.ContainsKey(CultureInfo.CurrentCulture.Name) ? CultureInfo.CurrentCulture.Name : "en-US"); // quick ternary to fallback if locale is not implemented
 
         /// <summary>
         /// Returns a message from the dictionary, according to current locale

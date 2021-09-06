@@ -31,6 +31,6 @@ namespace Rboxlo.Core
         /// <summary>
         /// Base path to the Rboxlo registry key
         /// </summary>
-        public static string BaseRegistryPath = Util.ToMachineReadable(DotEnv.Name);
+        public static string BaseRegistryPath = Util.ToMachineReadable(DotEnv.NAME);
     }
 }

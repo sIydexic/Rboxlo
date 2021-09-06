@@ -378,7 +378,7 @@ async function createLoginAttempt (threshold, userAgent, ip) {
 
         await sql.run(
             "UPDATE `login_attempts` SET `attempts` = ?, `amount` = ? WHERE `id` = ?",
-            [attempt.attempts, attempt.amount, attempt.id]
+            [JSON.stringify(attempt.attempts), attempt.amount, attempt.id]
         )
     } else {
         let attempts = [{
